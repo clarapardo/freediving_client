@@ -1,0 +1,24 @@
+.BCTNavbar-container{
+    padding-top: 25px;
+}
+
+.BCTNavbar {
+    border-radius: 20px !important;
+    background-color: rgba(240, 239, 239, 0.144);
+    backdrop-filter: blur(16px) brightness(125%);
+    padding: 15px 40px;
+}
+
+.BCTNavbar a {
+    color: white !important
+}
+
+.BCTNavbar-links {
+    margin-left: auto;
+}
+
+.BCTNavbar-links a {
+    padding-right: 1rem !important;
+    padding-left: 1.3rem !important;
+    font-size: 0.9rem;
+}
