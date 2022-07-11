@@ -1,12 +1,23 @@
-.BCTNavbar-container{
+/* .BCTNavbar-container {
     padding-top: 25px;
+} */
+
+.div-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
 }
 
 .BCTNavbar {
     border-radius: 20px !important;
+    width: 80%;
     background-color: rgba(240, 239, 239, 0.144);
     backdrop-filter: blur(16px) brightness(125%);
     padding: 15px 40px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: auto;
 }
 
 .BCTNavbar a {
@@ -17,8 +28,8 @@
     margin-left: auto;
 }
 
-.BCTNavbar-links a {
+/* .BCTNavbar-links a {
     padding-right: 1rem !important;
     padding-left: 1.3rem !important;
     font-size: 0.9rem;
-}
+} */

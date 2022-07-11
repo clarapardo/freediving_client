@@ -1,13 +1,12 @@
 import './homePage.css'
-import BCTNavbar from '../../../components/Navbar/navbar'
+import Hero from './../../../components/Hero/Hero'
 
 
 const HomePage = () => {
 
     return (
         <div className="home-page">
-            <BCTNavbar />
-            <h1>home page</h1>
+            <Hero />
         </div>
     )
 }

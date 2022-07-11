@@ -1,0 +1,20 @@
+.hero {
+    display: flex;
+    background-image: url("./../../../public/img/tadeo.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+img {
+    width: 100%
+}
+
+.hero h1 {
+    color: white;
+    margin-top: 170px
+}
+
+.hero p {
+    color: white
+}

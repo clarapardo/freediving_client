@@ -1,4 +1,4 @@
-import './navbar.css'
+import './Navbar.css'
 import { Navbar, Container, Nav, NavDropdown, Button, Modal } from 'react-bootstrap'
 
 
@@ -6,7 +6,8 @@ const BCTNavbar = () => {
 
 
     return (
-        < Container className="BCTNavbar-container">
+        // < Container className="BCTNavbar-container">
+        <div className="div-navbar">
             <Navbar collapseOnSelect expand="lg" className="BCTNavbar">
 
                 <Navbar.Brand href="/">BCT</Navbar.Brand>
@@ -21,7 +22,8 @@ const BCTNavbar = () => {
                 </Navbar.Collapse>
 
             </Navbar>
-        </Container>
+        </div>
+        // </Container>
     )
 
 }
