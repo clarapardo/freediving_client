@@ -1,0 +1,28 @@
+.Instagram {
+    margin-bottom: 50px;
+    position: relative
+}
+
+.instagram-images {
+    height: 170px;
+    background-color: green;
+}
+
+.instagram-tag {
+    background-color: rgba(240, 239, 239, 0.144);
+    backdrop-filter: blur(16px) brightness(125%);
+    padding: 15px 40px;
+    border-radius: 20px !important;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.instagram-tag svg {
+    fill: black;
+    height: 20px;
+    margin-right: 5px;
+}

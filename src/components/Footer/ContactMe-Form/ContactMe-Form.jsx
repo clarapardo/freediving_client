@@ -6,11 +6,11 @@ import Form from 'react-bootstrap/Form';
 const ContactMeForm = () => {
 
     return (
-        <Form>
-            <h5>let's talk</h5>
+        <Form className="ContactMeForm">
+            <h5>Let's talk.</h5>
             {/* <h5>leave a message</h5> */}
 
-            <p>To request more info, contact me directly or fill out the form and I will get back to you promptly</p>
+            <p>To request more info, contact me directly or fill out the form and I will get back to you promptly.</p>
 
 
             <Form.Group className="mb-3" controlId="name">
@@ -22,9 +22,12 @@ const ContactMeForm = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="message">
-                <Form.Control type="text" placeholder="Message" />
+                <Form.Control as="textarea" rows={3} placeholder="Message" />
             </Form.Group>
-            <Button variant="warning" type="submit">Send message</Button>
+
+            <div>
+                <Button variant="info" type="submit" className="ContactMeFormButton">Send message</Button>
+            </div>
         </Form>
     )
 

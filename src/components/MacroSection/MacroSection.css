@@ -1,0 +1,85 @@
+.MacroSection {
+    background-color: grey;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 80%
+}
+
+.MacroSection h2 {
+    display: inline;
+    width: auto;
+    color: white
+}
+
+.MacroSection .line {
+    height: 3px;
+    width: 170px;
+    background-color: #19415d;
+    margin-left: 20px
+}
+
+.MacroSection .title {
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MacroSection p {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    color: white
+}
+
+.MacroSection a {
+    text-decoration: none;
+    color: white;
+}
+
+.black-div {
+    background-color: black;
+    height: 400px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.MacroSection h5 {
+    color: white;
+}
+
+.macrophoto-subtitle {
+    width: 60%;
+    border-bottom: 3px solid #19415d;
+    text-align: end;
+    padding-right: 15px;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 85%;
+    left: 35%
+}
+
+.left-macrophoto {
+    width: 80%;
+}
+
+.middle-macrophoto {
+    width: 70%;
+}
+
+.right-macrophoto {
+    width: 90%
+}
+
+.macrophoto-row {
+    padding-right: calc(var(--bs-gutter-x) * 1);
+    padding-left: calc(var(--bs-gutter-x) * 1);
+}

@@ -4,29 +4,36 @@ import { Row, Col, Container } from 'react-bootstrap'
 
 import Subfooter from './Subfooter/Subfooter'
 import ContactMeForm from './ContactMe-Form/ContactMe-Form'
-
+import Instagram from './Instagram/Instagram'
 
 const Footer = () => {
 
     return (
         <div className='footer-div'>
+            <Instagram />
             <Container>
 
                 <Row>
-                    <Col md={3} className="left-column">
+                    <Col md={3}>
                         <ul>
                             <li><a href='#####'>Gallery</a></li>
                             <li><a href='#####'>Services</a></li>
                             <li><a href='#####'>About me</a></li>
                         </ul>
-                        <p>My contacts!</p>
-                        <p>Tenerife, Spain</p>
-                        <p>+34 111 111 111</p>
-                        <p>bct@bct.com</p>
+
+                        <div className="contactMe-div">
+                            <div className="title">
+                                <h6>Contact me.</h6>
+                                <div className="line"></div>
+                            </div>
+                            <p>+34 111 111 111</p>
+                            <p>bct@bct.com</p>
+                            <p>Tenerife, Spain</p>
+                        </div>
                     </Col>
 
                     <Col md={{ span: 4, offset: 1 }} className="center-column">
-                        <img src="/img/logo.png" />
+                        <div className="logo"></div>
                         <h3>BCT</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         <div className="social-media-links">

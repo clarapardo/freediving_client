@@ -1,0 +1,31 @@
+.form-control {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid greenyellow;
+    border-radius: 0;
+    font-size: 0.8rem;
+    color: white !important
+}
+
+.ContactMeForm p {
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.ContactMeForm div {
+    display: flex;
+    justify-content: end;
+}
+
+.ContactMeForm .btn {
+    background-color: grey;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 0px;
+}
+
+.ContactMeFormButton:hover {
+    border: 1px solid greenyellow;
+    background-color: transparent;
+    color: greenyellow
+}
