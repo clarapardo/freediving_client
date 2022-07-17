@@ -1,6 +1,7 @@
 .footer-div {
-    background-color: #101010;
+    background-color: #1a2a30;
     color: white;
+    padding-top: 50px;
 }
 
 
@@ -12,7 +13,7 @@
     text-transform: uppercase;
 }
 
-.footer-div ul{
+.footer-div ul {
     padding: 0;
 }
 

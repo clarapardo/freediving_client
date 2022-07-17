@@ -1,14 +1,13 @@
 import './homePage.css'
 import Hero from './../../../components/Hero/Hero'
-import MacroSection from '../../../components/MacroSection/MacroSection'
-
+import Section2 from '../../../components/Section2/Section2'
 
 const HomePage = () => {
 
     return (
         <div className="home-page">
             <Hero />
-            <MacroSection />
+            <Section2 />
         </div>
     )
 }

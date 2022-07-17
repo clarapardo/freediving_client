@@ -13,8 +13,8 @@ const Hero = () => {
 
             <div className='glassmorphism-hero'>
                 <Container>
-                    <h1>RAFAEL FERNÁNDEZ CABALLERO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla natus aperiam beatae perferendis quisquam!</p>
+                    <h1>LOREM IPSUM.</h1>
+                    <p>Underwater photographer, freediving instructor and activist.</p>
                 </Container>
             </div>
 

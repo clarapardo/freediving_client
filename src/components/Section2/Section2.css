@@ -1,0 +1,7 @@
+.Section2 {
+    background-image: url("./../../../public/img/background/oceanSand.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200vh;
+    padding-top: 70px;
+}

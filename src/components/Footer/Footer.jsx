@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <div className='footer-div'>
-            <Instagram />
+            {/* <Instagram /> */}
             <Container>
 
                 <Row>

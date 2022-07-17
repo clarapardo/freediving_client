@@ -9,37 +9,35 @@ const Sponsors = () => {
 
         <div className="Sponsors">
             <Row>
-                <Col>
-                    <a href="https://www.nationalgeographic.com.es/">
-                        <div className="eachSponsor-div">
+                <Col lg={3} md={6} xs={6}>
+                    <div className="eachSponsor-div">
+                        <a href="https://www.nationalgeographic.com.es/">
                             <img src="./img/sponsors/NatGeo.png" alt="natGeo" />
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </Col>
-                <Col>
-                    <a href="https://es.aqualung.com/es">
-                        <div className="eachSponsor-div">
+                <Col lg={3} md={6} xs={6}>
+                    <div className="eachSponsor-div">
+                        <a href="https://es.aqualung.com/es">
                             <img src="./img/sponsors/Aqualung.png" alt="aqualung" />
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </Col>
-                <Col>
-                    <a href="https://www.isotecnic.it/en/">
-                        <div className="eachSponsor-div">
+                <Col lg={3} md={6} xs={6}>
+                    <div className="eachSponsor-div">
+                        <a href="https://www.isotecnic.it/en/">
                             <img src="./img/sponsors/Isotta.png" alt="isotta" />
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </Col>
-                <Col>
-                    <a href="https://alpinawatches.com/">
-                        <div className="eachSponsor-div">
+                <Col lg={3} md={6} xs={6}>
+                    <div className="eachSponsor-div">
+                        <a href="https://alpinawatches.com/">
                             <img src="./img/sponsors/Alpina_Watches.png" alt="aplina watches" />
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </Col>
             </Row>
-
-
         </div>
     )
 }

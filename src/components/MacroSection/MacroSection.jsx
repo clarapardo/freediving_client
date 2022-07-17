@@ -13,28 +13,28 @@ const MacroSection = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptates, laboriosam veritatis atque reprehenderit aut dignissimos, ipsum, ex neque alias ad velit laudantium nesciunt a. Nemo nisi exercitationem sit laudantium!</p>
             <div>
                 <Row>
-                    <Col className="macrophoto-row">
+                    <Col lg={4} xs={12} className="macrophoto-row">
                         <div className="black-div">
                             <div className="macrophoto-subtitle">
                                 <h5>Diamond squid.</h5>
                             </div>
-                            <img className="left-macrophoto" src='/img/rafa1.jpg' />
+                            <img className="left-macrophoto" src='/img/JELLYFISH-NObg.png' />
                         </div>
                     </Col>
-                    <Col className="macrophoto-row">
+                    <Col lg={4} xs={12} className="macrophoto-row">
                         <div className="black-div">
                             <div className="macrophoto-subtitle">
                                 <h5>Seahorse.</h5>
                             </div>
-                            <img className="middle-macrophoto" src='/img/macro1.jpg' />
+                            <img className="middle-macrophoto" src='/img/fish-noBG.png' />
                         </div>
                     </Col>
-                    <Col className="macrophoto-row">
+                    <Col lg={4} xs={12} className="macrophoto-row">
                         <div className="black-div">
                             <div className="macrophoto-subtitle">
                                 <h5>Colorful predation.</h5>
                             </div>
-                            <img className="right-macrophoto" src='/img/rafa2.jpg' />
+                            <img className="right-macrophoto" src='/img/colorfulPredation-noBG.png' />
                         </div>
                     </Col>
                 </Row>
