@@ -1,7 +1,7 @@
 .form-control {
     background-color: transparent !important;
     border: none;
-    border-bottom: 1px solid greenyellow;
+    border-bottom: 1px solid #19415d;
     border-radius: 0;
     font-size: 0.8rem;
     color: white !important
@@ -18,14 +18,16 @@
 }
 
 .ContactMeForm .btn {
-    background-color: grey;
-    color: black;
-    border: 1px solid grey;
-    border-radius: 0px;
+    color: white;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 10px;
 }
 
 .ContactMeFormButton:hover {
-    border: 1px solid greenyellow;
+    border: 1px solid #19415d;
     background-color: transparent;
-    color: greenyellow
 }

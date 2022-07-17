@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <div className="App">
-      <BCTNavbar />
+      {/* <BCTNavbar /> */}
       <AppRoutes />
       <Footer />
     </div>

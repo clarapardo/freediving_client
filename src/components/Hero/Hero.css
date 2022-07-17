@@ -1,20 +1,68 @@
 .hero {
-    display: flex;
-    background-image: url("./../../../public/img/tadeo.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* display: flex; */
+    /* background-image: url("./../../../public/img/tadeo.jpeg"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
     height: 100vh;
+    position: relative
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glassmorphism-hero {
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    width: 40%;
+    height: 100%;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding-top: 15vh;
+}
+
+h1 {
+    font-size: 6vw;
 }
 
 img {
     width: 100%
 }
 
-.hero h1 {
+.hero p {
     color: white;
-    margin-top: 170px
+    font-size: 1vw;
 }
 
-.hero p {
-    color: white
+
+.social-media-links-hero {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% - 200px);
+    left: calc(100% - 50px)
+}
+
+.social-media-icon-hero {
+    width: 20px;
+    height: 20px;
+    margin: 10px 5px;
+    margin-left: auto;
+}
+
+.social-media-icon-hero svg {
+    fill: white;
 }

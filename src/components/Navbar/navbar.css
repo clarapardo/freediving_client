@@ -12,12 +12,17 @@
 .BCTNavbar {
     border-radius: 20px !important;
     width: 80%;
-    background-color: rgba(240, 239, 239, 0.144);
-    backdrop-filter: blur(16px) brightness(125%);
     padding: 15px 40px;
     position: absolute;
     margin-top: 25px;
     margin-left: auto;
+
+
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
 }
 
 .BCTNavbar a {

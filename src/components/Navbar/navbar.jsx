@@ -6,7 +6,6 @@ const BCTNavbar = () => {
 
 
     return (
-        // < Container className="BCTNavbar-container">
         <div className="div-navbar">
             <Navbar collapseOnSelect expand="lg" className="BCTNavbar">
 
@@ -23,7 +22,6 @@ const BCTNavbar = () => {
 
             </Navbar>
         </div>
-        // </Container>
     )
 
 }
