@@ -1,0 +1,18 @@
+.Sponsors {
+    padding: 50px 130px;
+    /* object-fit: cover; */
+}
+
+.eachSponsor-div img {
+    width: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.eachSponsor-div {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

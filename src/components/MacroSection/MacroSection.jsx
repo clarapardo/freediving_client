@@ -40,7 +40,7 @@ const MacroSection = () => {
                 </Row>
 
             </div>
-            <Link to='##'>View all pictures</Link>
+            <Link to='#####'>View all pictures</Link>
         </Container>
     )
 
