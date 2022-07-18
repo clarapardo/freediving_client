@@ -10,8 +10,8 @@
     padding-top: 20px;
     width: 80%;
 
-    border-radius: 20px;
-
+    /* border-radius: 20px; */
+    margin-bottom: 140px;
 }
 
 .MacroSection h2 {
@@ -58,7 +58,7 @@
     align-items: center;
     position: relative;
 
-    border-radius: 40px;
+    /* border-radius: 40px; */
 }
 
 .MacroSection h5 {

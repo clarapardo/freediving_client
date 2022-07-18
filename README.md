@@ -9,6 +9,7 @@ PENDING
 * Implement contact form logic (nodemailer)
 * About me - Underwater Photography of the Year 2022
 * Add new sponsors
+* Counter with meters, hold time, numb of inmersions, etc
 
 EXTRA SECTIONS
 * Gallery - eshop
