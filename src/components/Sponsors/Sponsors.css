@@ -1,22 +1,24 @@
-.Sponsors {
-    padding: 50px 130px;
-    /* object-fit: cover; */
+.slideshow {
+    overflow: hidden;
+    padding: 50px 0px;
 }
 
-.Sponsors a {
-    display: contents;
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 2000ms;
 }
 
-.eachSponsor-div img {
-    width: 50%;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+.slideshowSlider-2 {
+    white-space: nowrap;
 }
 
-.eachSponsor-div {
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.slide {
+    display: inline-block;
+    width: 25%;
+    padding: 0px 25px;
+    text-align: center;
+}
+
+.slide img {
+    width: 100px
 }

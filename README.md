@@ -1,9 +1,5 @@
 PENDING 
 
-- Select font
-- Navbar effect
-
-
 * Make things responsive
 * Logo
 * Implement contact form logic (nodemailer)
@@ -20,9 +16,16 @@ EXTRA SECTIONS
 
 Sections order
 1. Hero
+2. About me (counter!)
 2. Gallery
 3. Services
 4. Macro photography
-5. Multimedia section
+5. Multimedia section // social proof
 6. Sponsors
 7. Footer
+
+
+OBJECTIVES FOR TODAY
+- Stiky navbar
+- Select font
+- Slider sponsors

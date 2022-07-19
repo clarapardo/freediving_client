@@ -1,7 +1,7 @@
 .Section2 {
-    background-image: url("./../../../public/img/background/oceanSand.jpg");
+    /* background-image: url("./../../../public/img/background/oceanSand.jpg"); */
     background-size: cover;
     background-attachment: fixed;
     height: 400vh;
-    padding-top: 140px;
+    /* padding-top: 140px; */
 }

@@ -6,7 +6,7 @@ const column2 = ['./img/gallery/13.jpg', './img/gallery/14.jpg']
 const column3 = ['./img/gallery/16.jpg', './img/gallery/17.jpg']
 
 
-const Gallery = () => {
+const GalleryPreview = () => {
 
     return (
 
@@ -58,4 +58,4 @@ const Gallery = () => {
 
 }
 
-export default Gallery
+export default GalleryPreview

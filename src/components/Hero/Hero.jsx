@@ -10,6 +10,8 @@ const Hero = () => {
 
             {/* <video src="/img/tiburon.mp4" autoPlay muted loop playsInline></video> */}
             <video src="https://exposure.accelerator.net/production/photos/ibfuae6jxdl4f5qe8x81cnt3weo0vkkxgyva/original.mp4;/resize(1920,_,fit)/crf(20).mp4" autoPlay muted loop playsInline></video>
+            
+            <div className="auxAux"></div>
 
             <div className='glassmorphism-hero'>
                 <Container>

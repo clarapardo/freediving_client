@@ -1,5 +1,5 @@
 .Gallery {
-    height: 1000px;
+    height: max-content;
     /* background-color: blue; */
     margin-bottom: 70px;
     color: white;
@@ -25,7 +25,7 @@
     background-color: #19415d;
     width: 35%;
     position: absolute;
-    top: 16%;
+    top: 23%;
     left: 0
 }
 
