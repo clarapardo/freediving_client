@@ -1,6 +1,6 @@
 import './Section2.css'
 import MacroSection from '../MacroSection/MacroSection'
-import Gallery from '../Gallery/Gallery'
+import Gallery from '../Gallery-preview/Gallery-preview'
 
 
 const Section2 = () => {

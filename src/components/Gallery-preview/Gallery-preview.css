@@ -1,10 +1,14 @@
 .Gallery {
-    height: 600px;
+    height: 1000px;
     /* background-color: blue; */
     margin-bottom: 70px;
     color: white;
     text-align: justify;
     position: relative;
+}
+
+.gallery-text {
+    padding-top: 50px;
 }
 
 .gallery-imgs img {
@@ -21,7 +25,7 @@
     background-color: #19415d;
     width: 35%;
     position: absolute;
-    top: 17%;
+    top: 16%;
     left: 0
 }
 
@@ -39,7 +43,9 @@
     height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 20px;
+    z-index: 2;
 }
 
 .middle-gallery-preview {

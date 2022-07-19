@@ -1,9 +1,9 @@
-import './Gallery.css'
+import './Gallery-preview.css'
 import { Row, Col, Container } from 'react-bootstrap'
 
-const column1 = ['./img/gallery/06.jpg', './img/gallery/11.png', './img/gallery/12.jpg']
-const column2 = ['./img/gallery/13.jpg', './img/gallery/14.jpg', './img/gallery/15.jpg']
-const column3 = ['./img/gallery/16.jpg', './img/gallery/17.jpg', './img/gallery/18.jpg']
+const column1 = ['./img/gallery/06.jpg', './img/gallery/11.png']
+const column2 = ['./img/gallery/13.jpg', './img/gallery/14.jpg']
+const column3 = ['./img/gallery/16.jpg', './img/gallery/17.jpg']
 
 
 const Gallery = () => {
@@ -14,7 +14,7 @@ const Gallery = () => {
             <div className="line-gallery"></div>
             <Container>
                 <Row>
-                    <Col lg={6}>
+                    <Col lg={5} className="gallery-text">
                         <h2>Dive in.</h2>
                         <h2>Explore the world.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
@@ -27,20 +27,20 @@ const Gallery = () => {
                         </button>
                     </Col>
 
-                    <Col lg={6} className="gallery-imgs">
+                    <Col lg={{ span: 6, offset: 1 }} className="gallery-imgs">
 
                         <Row>
                             <Col>
-                                {column1.map(elm => <div className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}></div>)}
+                                {column1.map(elm => <div key={elm} className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}></div>)}
                             </Col>
                             <Col className="middle-gallery-preview">
-                                {column2.map(elm => <div className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}></div>)}
+                                {column2.map(elm => <div key={elm} className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}></div>)}
                             </Col>
                             <Col>
                                 {column3.map(elm => {
                                     return (
-                                        <div className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}>
-                                            <img src={elm} />
+                                        <div key={elm} className="gallery-preview-pic-div" style={{ backgroundImage: `url(${elm})` }}>
+                                            <img src={elm} style={{ opacity: 0 }} />
                                         </div>
                                     )
                                 })}
