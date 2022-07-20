@@ -9,7 +9,7 @@ import Sponsors2 from './components/Sponsors/Sponsors'
 function App() {
   return (
     <div className="App">
-      {/* <BCTNavbar /> */}
+      <BCTNavbar />
       <AppRoutes />
       {/* <Sponsors /> */}
       <Sponsors2 />

@@ -1,6 +1,18 @@
 .ServicesPreview {
-
     background-color: blue;
+    background-image: url('./../../../public/img/whaleShark-b&w.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     height: 600px;
     margin-bottom: 60px;
+}
+
+.ServicesPreview h2 {
+    color: white
+}
+
+.ServicesPreview hr{
+    color: white;
 }

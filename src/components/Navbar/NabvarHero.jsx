@@ -1,8 +1,10 @@
 import './NavbarHero.css'
 import { Navbar, Container, Nav, NavDropdown, Button, Modal } from 'react-bootstrap'
+import { useEffect, useState } from 'react'
 
 
 const Navbar2 = () => {
+
 
     return (
 

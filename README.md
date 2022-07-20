@@ -4,7 +4,6 @@ PENDING
 * Logo
 * Implement contact form logic (nodemailer)
 * About me - Underwater Photography of the Year 2022
-* Add new sponsors
 * Counter with meters, hold time, numb of inmersions, etc
 
 EXTRA SECTIONS
@@ -15,17 +14,18 @@ EXTRA SECTIONS
 
 
 Sections order
-1. Hero
+    1. Hero
 2. About me (counter!)
-2. Gallery
+    2. Gallery
 3. Services
-4. Macro photography
+    4. Macro photography
 5. Multimedia section // social proof
-6. Sponsors
-7. Footer
+    6. Sponsors
+    7. Footer
 
 
 OBJECTIVES FOR TODAY
 - Stiky navbar
 - Select font
-- Slider sponsors
+- Acabar los sponsors (poner links ok + ajustar tiempo)
+- Curvita foto azul hero

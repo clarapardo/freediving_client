@@ -6,27 +6,34 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: fixed;
+    top: 0px;
+    z-index: 6;
+    transition: 0.65s ease;
+}
+
+.hidden {
+    position: fixed;
+    top: -100px;
+    transition: 0.65s ease;
 }
 
 .BCTNavbar {
-    border-radius: 20px !important;
-    width: 80%;
+    width: 100%;
     padding: 15px 40px;
     position: absolute;
-    margin-top: 25px;
     margin-left: auto;
-
 
     background: rgba(255, 255, 255, 0.11);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.17);
+    position: sticky;
 }
 
 .BCTNavbar a {
-    color: white !important
+    color: red !important
 }
 
 .BCTNavbar-links {
