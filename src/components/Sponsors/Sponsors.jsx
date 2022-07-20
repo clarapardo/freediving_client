@@ -3,7 +3,15 @@ import './Sponsors.css'
 import { useState, useRef, useEffect } from "react"
 import { Row, Col, Container } from 'react-bootstrap'
 
-const sponsors = ['./img/sponsors/NatGeo.png', './img/sponsors/Alpina_Watches.png', './img/sponsors/AqualungMini.png', './img/sponsors/GoPro.png', './img/sponsors/Isotta.png', './img/sponsors/Padi.png']
+// const sponsors = ['./img/sponsors/NatGeo.png', './img/sponsors/Alpina_Watches.png', './img/sponsors/AqualungMini.png', './img/sponsors/GoPro.png', './img/sponsors/Isotta.png', './img/sponsors/Padi.png']
+const sponsors = [
+    { image: './img/sponsors/NatGeo.png', link: "https://www.nationalgeographic.com.es/" },
+    { image: './img/sponsors/Alpina_Watches.png', link: "https://www.alpinawatches.com/" },
+    { image: './img/sponsors/AqualungMini.png', link: "https://es.aqualung.com/es" },
+    { image: './img/sponsors/GoPro.png', link: "https://gopro.com/es/es/" },
+    { image: './img/sponsors/Isotta.png', link: "https://www.isotecnic.it/en/" },
+    { image: './img/sponsors/Padi.png', link: "https://www.padi.com/es" },
+]
 
 
 const Sponsors = () => {
@@ -52,11 +60,11 @@ const Sponsors = () => {
         <div className="slideshow">
             <div className="slideshowSlider" id="aux" style={{ transform: `translate3d(${-index * 25}%, 0, 0)` }}>
 
-                {sponsorsCopy.map((image, index) => (
+                {sponsorsCopy.map((sponsor, index) => (
 
                     <div className="slide" key={index}>
-                        <a href={"https://www.nationalgeographic.com.es/"}>
-                            <img src={image} alt="natGeo" />
+                        <a href={sponsor.link}>
+                            <img src={sponsor.image} alt="sponsorLogo" />
                         </a>
                     </div>
 

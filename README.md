@@ -25,7 +25,5 @@ Sections order
 
 
 OBJECTIVES FOR TODAY
-- Stiky navbar
 - Select font
-- Acabar los sponsors (poner links ok + ajustar tiempo)
 - Curvita foto azul hero
