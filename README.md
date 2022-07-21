@@ -27,3 +27,4 @@ Sections order
 OBJECTIVES FOR TODAY
 - Select font
 - Curvita foto azul hero
+- My services
