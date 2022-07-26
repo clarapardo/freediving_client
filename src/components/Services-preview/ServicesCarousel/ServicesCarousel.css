@@ -36,3 +36,19 @@
 .services {
     display: flex
 }
+
+.sliderStyles .slide img {
+    width: 400px;
+    height: 150px;
+    border-radius: 30px;
+}
+
+.hide {
+    display: none !important
+}
+
+.sliderStyles .slide {
+    width: 50%;
+    height: 27vh !important;
+    border-radius: 20px;
+}
