@@ -75,7 +75,7 @@ img {
 }
 
 
-/* .auxAux {
+.auxAux {
     height: 35vh;
     width: 100%;
     position: absolute;
@@ -85,4 +85,4 @@ img {
 
     margin-top: 65vh;
     background: linear-gradient(0deg, rgb(3 61 118) 0%, rgb(1 69 130) 36%, rgba(0, 0, 0, 0) 100%)
-} */
+}

@@ -1,5 +1,5 @@
 import './Gallery-preview.css'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Button } from 'react-bootstrap'
 
 const column1 = ['./img/gallery/06.jpg', './img/gallery/11.png']
 const column2 = ['./img/gallery/13.jpg', './img/gallery/14.jpg']
@@ -19,12 +19,7 @@ const GalleryPreview = () => {
                         <h2>Explore the world.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
 
-                        <button className="cta">
-                            <span className="hover-underline-animation"> see gallery </span>
-                            <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
-                                <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
-                            </svg>
-                        </button>
+                        <Button variant="info">see gallery </Button>
                     </Col>
 
                     <Col lg={{ span: 6, offset: 1 }} className="gallery-imgs">

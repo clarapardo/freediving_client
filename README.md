@@ -10,7 +10,6 @@ EXTRA SECTIONS
 * Gallery - eshop
 * Services
 * Multimedia section (Miguel Lozano inspo)
-* Re-do the footer
 
 
 Sections order
@@ -28,3 +27,4 @@ OBJECTIVES FOR TODAY
 - Select font
 - Curvita foto azul hero
 - My services
+- Animaciones

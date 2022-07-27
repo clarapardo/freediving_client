@@ -13,6 +13,21 @@
     color: white
 }
 
-.ServicesPreview hr{
+.ServicesPreview hr {
     color: white;
+}
+
+.services-carousel-preview {
+    height: 100%;
+}
+
+.carosel-column {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+}
+
+.text-column {
+    padding-top: 50px;
+    padding-left: 80px;
 }

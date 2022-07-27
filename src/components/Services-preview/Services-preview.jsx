@@ -1,5 +1,5 @@
 import './Services-preview.css'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Button } from 'react-bootstrap'
 import { useState } from 'react'
 import ServicesCarousel from './ServicesCarousel/ServicesCarousel'
 
@@ -9,16 +9,17 @@ const ServicesPreview = () => {
 
     return (
         <div className="ServicesPreview">
-            <Row>
-                <Col>
+            <Row className="services-carousel-preview">
+                <Col className="text-column">
                     <Container>
-                        <h2>My services.</h2>
+                        <h2>Services.</h2>
                         <hr />
-                        <button> contact me </button>
+                        <p style={{ color: 'white', textAlign: 'justify' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dignissimos debitis voluptates, minus consectetur rem quam iure sit voluptas optio dolor ipsa facilis autem necessitatibus inventore natus, voluptatem voluptate! Dolorem.</p>
+                        <Button variant="info"> contact me </Button>
                     </Container>
                 </Col>
 
-                <Col>
+                <Col className="carosel-column">
                     <ServicesCarousel />
                 </Col>
             </Row>
