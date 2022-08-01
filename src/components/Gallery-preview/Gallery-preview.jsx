@@ -19,7 +19,7 @@ const GalleryPreview = () => {
                         <h2>Explore the world.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
 
-                        <Button variant="info">see gallery </Button>
+                        <Button variant="info" className="gallery-preview-btn">see gallery </Button>
                     </Col>
 
                     <Col lg={{ span: 6, offset: 1 }} className="gallery-imgs">

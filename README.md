@@ -24,7 +24,11 @@ Sections order
 
 
 OBJECTIVES FOR TODAY
-- Select font
 - Curvita foto azul hero
-- My services
+- About me -> counter
+- Hacer botón
+- Select font
 - Animaciones
+
+
+- Services - podcats maybe?
