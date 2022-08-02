@@ -39,7 +39,10 @@
 
 .contactMe-div h6 {
     display: inline;
-    width: auto
+    width: auto;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .line {

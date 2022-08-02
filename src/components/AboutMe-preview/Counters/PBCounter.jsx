@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 
+
 const PBCounter = () => {
 
     // TIME COUNTER
@@ -18,7 +19,6 @@ const PBCounter = () => {
             timeCounter()
             timeFormatter()
         }
-
     }, [time])
 
     const timeCounter = () => setTimeout(() => setTime(time + 1), 3)
@@ -49,14 +49,19 @@ const PBCounter = () => {
 
     return (
         <div className="Counter-div">
-            <p>{minutes < 10 ? `0${minutes}` : minutes}'
-                {seconds < 10 ? `0${seconds}` : seconds}''
-                -
-                {depth} m.
-            </p>
+            <div className="PB">
+                <p>{minutes < 10 ? `0${minutes}` : minutes}'
+                    {seconds < 10 ? `0${seconds}` : seconds}''
+                </p>
+                <h6>-</h6>
+                <p>{depth < 10 ? `0${depth}` : depth} m.</p>
+            </div>
+
             <h6>FREEDIVING PB</h6>
         </div>
     )
 }
+
+
 
 export default PBCounter

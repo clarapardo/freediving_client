@@ -3,12 +3,13 @@ import { Row, Col, Container } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import NumProjectsCounter from './Counters/NumProjectsCounter'
 import PBCounter from './Counters/PBCounter'
+import CertificationsCounter from './Counters/CertificationsCounter'
+
 
 const AboutMePreview = () => {
 
     const [currentScrollHeight, setCurrentScrollHeight] = useState(0)
     const [opacity, setOpacity] = useState(1)
-
     const [scrollDirection, setScrollDirection] = useState('down')
 
 
@@ -18,34 +19,22 @@ const AboutMePreview = () => {
     })
 
     const calcScrollDirection = () => {
+
         window.onscroll = () => {
             const newScrollHeight = Math.ceil(window.scrollY / 10)
-            // newScrollHeight > currentScrollHeight && newScrollHeight !== currentScrollHeight
-            //     ?
-            //     setScrollDirection('down')
-            //     :
-            //     setScrollDirection('up')
-
 
             if (newScrollHeight > currentScrollHeight && newScrollHeight !== currentScrollHeight) {
                 setScrollDirection('down')
             } else if (newScrollHeight < currentScrollHeight && newScrollHeight !== currentScrollHeight) {
                 setScrollDirection('up')
-            } else if (newScrollHeight === currentScrollHeight) {
-                //
             }
 
-
             setCurrentScrollHeight(newScrollHeight)
-            // console.log('--------', newScrollHeight)
         }
     }
 
 
     const changeOpacity = () => {
-
-        // console.log('-----------', scrollDirection)
-        // console.log('xxxx', window.innerHeight)
 
         if (scrollDirection === 'down' && window.scrollY > window.innerHeight / 3) {
 
@@ -55,26 +44,19 @@ const AboutMePreview = () => {
         }
 
         if (scrollDirection === 'up' && window.scrollY < window.innerHeight * 4 / 3) {
-            // console.log('ESTOY EN LA SEGUNDAAAAA')
             let scrollHeight = window.scrollY - window.innerHeight * 4 / 3
             let value = -Math.min(scrollHeight * 70) / 10000
 
-            // console.log('--------', value)
             setOpacity(value)
-
         }
-
-
-        // console.log('OPACITY: ', value)
     }
 
-    return (
 
+    return (
         <div className="AboutMe-preview" style={{ background: `rgba(3, 61, 118, ${opacity})` }}>
             <Container>
 
                 <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatibus modi debitis sequi dicta ab sint magnam, aliquid delectus doloribus consectetur ipsam voluptate quibusdam quos, expedita, pariatur saepe minima esse.</h2>
-
 
                 <Row>
 
@@ -86,9 +68,8 @@ const AboutMePreview = () => {
                         <div className="counters">
                             <NumProjectsCounter />
                             <PBCounter />
-                            <article>OWP5 (certifications)</article>
+                            <CertificationsCounter />
                         </div>
-
                     </Col>
 
                     <Col>
@@ -96,7 +77,6 @@ const AboutMePreview = () => {
                             <img src='img/UPY2022.jpg' />
                             <p>Underwater Photograph of the Year, 2022</p>
                         </div>
-
                     </Col>
 
                 </Row>
@@ -104,6 +84,7 @@ const AboutMePreview = () => {
         </div>
     )
 }
+
 
 
 export default AboutMePreview

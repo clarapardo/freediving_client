@@ -9,11 +9,11 @@ const NumProjectsCounter = () => {
 
     useEffect(() => {
 
-        if (number < totalNum) counter()
+        if (number < totalNum) ProjectCounter()
 
     }, [number])
 
-    const counter = () => {
+    const ProjectCounter = () => {
 
         setTimeout(() => {
             setNumber(number + 1)
@@ -24,7 +24,9 @@ const NumProjectsCounter = () => {
 
     return (
         <div className="Counter-div">
-            <p>{number}</p>
+            <div className="NumProjects">
+                <p>{number}</p>
+            </div>
             <h6>PROJECTS</h6>
         </div>
     )

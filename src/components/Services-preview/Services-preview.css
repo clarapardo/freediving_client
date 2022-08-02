@@ -15,7 +15,9 @@
 }
 
 .ServicesPreview h2 {
-    color: white
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .ServicesPreview hr {

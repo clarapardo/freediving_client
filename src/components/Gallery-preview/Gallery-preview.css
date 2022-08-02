@@ -7,6 +7,11 @@
     position: relative;
 }
 
+.Gallery h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
 .gallery-text {
     padding-top: 50px;
 }

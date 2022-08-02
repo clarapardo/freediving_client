@@ -12,6 +12,11 @@
     text-align: justify;
 }
 
+.ContactMeForm h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
 .ContactMeForm div {
     display: flex;
     justify-content: end;
@@ -25,6 +30,9 @@
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.17);
     border-radius: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .ContactMeFormButton:hover {
