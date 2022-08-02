@@ -11,7 +11,7 @@ const BCTNavbar = () => {
 
         if (typeof window !== 'undefined') {
 
-            (window.scrollY < (window.innerHeight - 100)) ? setInvisible(true) : setInvisible(false)
+            (window.scrollY < (window.innerHeight + 500)) ? setInvisible(true) : setInvisible(false)
 
         }
     }
