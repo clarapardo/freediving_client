@@ -1,8 +1,8 @@
-import './MacroSection.css'
+import './Macro-preview.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const MacroSection = () => {
+const MacroPreview = () => {
 
     return (
         <Container className="MacroSection">
@@ -46,4 +46,4 @@ const MacroSection = () => {
 
 }
 
-export default MacroSection
+export default MacroPreview

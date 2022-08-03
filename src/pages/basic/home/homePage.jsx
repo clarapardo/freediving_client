@@ -1,13 +1,13 @@
 import './homePage.css'
-import Hero from './../../../components/Hero/Hero'
-import Section2 from '../../../components/Section2/Section2'
+import Hero from './../../../components/02.Home/01.Hero/Hero'
+import Body from '../../../components/02.Home/02.Body/Body'
 
 const HomePage = () => {
 
     return (
         <div className="home-page">
             <Hero />
-            <Section2 />
+            <Body />
         </div>
     )
 }

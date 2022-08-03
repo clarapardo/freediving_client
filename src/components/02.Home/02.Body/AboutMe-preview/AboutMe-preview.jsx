@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react'
 import NumProjectsCounter from './Counters/NumProjectsCounter'
 import PBCounter from './Counters/PBCounter'
 import CertificationsCounter from './Counters/CertificationsCounter'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 
 const AboutMePreview = () => {
@@ -11,7 +15,12 @@ const AboutMePreview = () => {
     const [currentScrollHeight, setCurrentScrollHeight] = useState(0)
     const [opacity, setOpacity] = useState(1)
     const [scrollDirection, setScrollDirection] = useState('down')
+    const [offsetY, setOffsetY] = useState(0)
 
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     useEffect(() => {
         calcScrollDirection()
@@ -52,20 +61,31 @@ const AboutMePreview = () => {
     }
 
 
+    // console.log('????', window.innerHeight)
+
+    const handleScroll = () => setOffsetY(window.scrollY)
+
+
+
+
+
     return (
+
         <div className="AboutMe-preview" style={{ background: `rgba(3, 61, 118, ${opacity})` }}>
             <Container>
 
-                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatibus modi debitis sequi dicta ab sint magnam, aliquid delectus doloribus consectetur ipsam voluptate quibusdam quos, expedita, pariatur saepe minima esse.</h2>
-
+                <div className="quote">
+                    <h2 data-aos="fade-up">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatibus modi debitis sequi dicta ab sint magnam, aliquid delectus doloribus.</h2>
+                </div>
                 <Row>
 
-                    <Col className="leftCol-AboutMe">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo?</p>
+                    {console.log('......', document.getElementById('hola')?.offsetTop)}
+                    <Col className="leftCol-AboutMe" >
+                        <p style={{ transform: `translateY(${-(1100 - offsetY) * 0.3}px)` }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo?</p>
                         <br />
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo?</p>
+                        <p style={{ margin: '50px 0px', transform: `translateY(${-(900 - offsetY) * 0.2}px)` }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo?</p>
 
-                        <div className="counters">
+                        <div className="counters" data-aos="fade-up">
                             <NumProjectsCounter />
                             <PBCounter />
                             <CertificationsCounter />
@@ -73,9 +93,9 @@ const AboutMePreview = () => {
                     </Col>
 
                     <Col>
-                        <div className="aboutMe-pic">
+                        <div className="aboutMe-pic" style={{ transform: `translateY(${(770 - offsetY) * 0.5}px)` }}>
                             <img src='img/UPY2022.jpg' />
-                            <p>Underwater Photograph of the Year, 2022</p>
+                            <p id="hola">Underwater Photograph of the Year, 2022</p>
                         </div>
                     </Col>
 

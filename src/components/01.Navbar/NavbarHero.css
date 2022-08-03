@@ -8,10 +8,12 @@
 
 .navbarHero a {
     color: white !important;
-    margin: 0px 30px;
+    margin: 5px 30px;
 
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .navbarHero-links {

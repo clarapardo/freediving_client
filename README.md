@@ -7,7 +7,7 @@ PENDING
 
 Sections order
     1. Hero
-    2. About me (counter!)
+    2. About me
     3. Gallery
     4. Services
             4. Macro photography
@@ -17,10 +17,11 @@ Sections order
 
 
 OBJECTIVES FOR TODAY
-- About me -> counter
-- Select font
 - Animaciones
+- Logo + quitar BCT
+- White line in services-preview
 - Hacer botón
+- Select font
 
 
 - Services - podcats maybe?

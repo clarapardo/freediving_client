@@ -20,7 +20,7 @@
 
 .BCTNavbar {
     width: 100%;
-    padding: 15px 40px;
+    padding: 8px 40px;
     position: absolute;
     margin-left: auto;
 
@@ -33,15 +33,18 @@
 }
 
 .BCTNavbar a {
-    color: red !important;
+    color: #19415d !important;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 0.9rem;
 
     margin: 0px 30px;
+    text-transform: uppercase;
 }
 
 .BCTNavbar .navbar-brand {
     font-weight: 900;
+    font-size: 1.3rem;
 }
 
 .BCTNavbar-links {

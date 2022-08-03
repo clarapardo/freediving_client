@@ -1,6 +1,9 @@
 import { Container } from 'react-bootstrap'
 import './Hero.css'
-import Navbar2 from '../Navbar/NabvarHero'
+import Navbar2 from '../../01.Navbar/NabvarHero'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 const Hero = () => {
 
@@ -9,17 +12,17 @@ const Hero = () => {
             <Navbar2 />
 
             <video src="https://exposure.accelerator.net/production/photos/ibfuae6jxdl4f5qe8x81cnt3weo0vkkxgyva/original.mp4;/resize(1920,_,fit)/crf(20).mp4" autoPlay muted loop playsInline></video>
-            
+
             <div className="auxAux"></div>
 
-            <div className='glassmorphism-hero'>
+            <div className='glassmorphism-hero' data-aos="zoom-in">
                 <Container>
-                    <h1>RAFA FERNÁNDEZ.</h1>
+                    <h1>RAFA FERNANDEZ.</h1>
                     <p>Underwater photographer, freediving instructor and activist.</p>
                 </Container>
             </div>
 
-            <div className="social-media-links-hero">
+            <div className="social-media-links-hero" data-aos="fade-left">
                 <a href='#####'>
                     <div className="social-media-icon-hero">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

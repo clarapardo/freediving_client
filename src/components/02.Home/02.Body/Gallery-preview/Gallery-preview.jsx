@@ -14,15 +14,7 @@ const GalleryPreview = () => {
             <div className="line-gallery"></div>
             <Container>
                 <Row>
-                    <Col lg={5} className="gallery-text">
-                        <h2>Dive in.</h2>
-                        <h2>Explore the world.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
-
-                        <Button variant="info" className="gallery-preview-btn">see gallery </Button>
-                    </Col>
-
-                    <Col lg={{ span: 6, offset: 1 }} className="gallery-imgs">
+                    <Col lg={6} className="gallery-imgs">
 
                         <Row>
                             <Col>
@@ -41,7 +33,15 @@ const GalleryPreview = () => {
                                 })}
                             </Col>
                         </Row>
-                        {/* <img src="img/gallery/gallery-preview.png" alt="UPY2022" /> */}
+
+                    </Col>
+
+                    <Col lg={{ span: 5, offset: 1 }} className="gallery-text">
+                        <h2>Dive in.</h2>
+                        <h2>Explore the world.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
+
+                        <Button variant="info" className="gallery-preview-btn">see gallery </Button>
                     </Col>
 
                 </Row>
