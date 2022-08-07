@@ -63,6 +63,7 @@ img {
     top: 40%;
     left: calc(100% - 50px);
     z-index: 4;
+    position: fixed;
 }
 
 .social-media-icon-hero {
@@ -74,6 +75,7 @@ img {
 
 .social-media-icon-hero svg {
     fill: white;
+    filter: invert(100%)
 }
 
 

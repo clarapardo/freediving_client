@@ -67,6 +67,7 @@ const AboutMePreview = () => {
 
 
 
+    {console.log('......', document.getElementById('hola')?.getBoundingClientRect())}
 
 
     return (
@@ -79,7 +80,6 @@ const AboutMePreview = () => {
                 </div>
                 <Row>
 
-                    {console.log('......', document.getElementById('hola')?.offsetTop)}
                     <Col className="leftCol-AboutMe" >
                         <p style={{ transform: `translateY(${-(1100 - offsetY) * 0.3}px)` }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ipsum in amet explicabo maiores assumenda dolorem ab sapiente corrupti, optio esse voluptas tempore nesciunt adipisci quo! Ea dolorum unde explicabo?</p>
                         <br />
