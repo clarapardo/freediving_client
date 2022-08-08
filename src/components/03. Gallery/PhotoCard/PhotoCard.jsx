@@ -15,19 +15,19 @@ const PhotoCard = (photoData) => {
 
 const styles = {
     square: {
-        gridRowEnd: 'span 30'
+        gridRowEnd: 'span 15'
     },
     small: {
         gridRowEnd: 'span 10'
     },
     medium: {
-        gridRowEnd: 'span 30'
+        gridRowEnd: 'span 20'
     },
     large: {
-        gridRowEnd: 'span 40'
+        gridRowEnd: 'span 30'
     },
     extralarge: {
-        gridRowEnd: 'span 50'
+        gridRowEnd: 'span 40'
     }
 }
 

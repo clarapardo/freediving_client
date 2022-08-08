@@ -1,18 +1,19 @@
 import './photoDetailsPage.css'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { Container, Row, Col, Button, Dropdown } from 'react-bootstrap'
+import { useEffect, useState, useContext } from 'react'
+import { Container, Row, Col, Button, Dropdown, Accordion } from 'react-bootstrap'
 import photographyService from '../../../services/photography.service'
+import cartService from './../../../services/cart.service'
+import { AuthContext } from './../../../contexts/auth.context'
 
 
-
-const PhotoDetailsPage = () => {
+const PhotoDetailsPage = ({ setShow }) => {
 
     const { idPhoto } = useParams()
+    const { user, isLoggedIn } = useContext(AuthContext)
+
     const [photoData, setPhotoData] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
-
-    const [show, setShow] = useState(false)
 
 
     useEffect(() => {
@@ -26,11 +27,16 @@ const PhotoDetailsPage = () => {
             .catch(err => console.log(err))
     }, [])
 
+    const handleAddToCart = () => {
 
-    const handleDropdown = () => {
+        const userId = user._id
 
-        show ? setShow(false) : setShow(true)
-
+        cartService
+            .addItem({ userId, idPhoto })
+            .then(() => {
+                setShow(true)
+            })
+            .catch(err => console.log(err))
     }
 
 
@@ -63,25 +69,22 @@ const PhotoDetailsPage = () => {
                                 <p>{photoData.location}</p>
                             </div>
 
-                            <Button>Add to cart</Button>
+                            <Button onClick={handleAddToCart}>Add to cart</Button>
 
-
-                            <div className="dropdown">
-                                <div className="dropdown-header" onClick={handleDropdown}>
-                                    <h6>DELIVERY</h6>
-                                    {show
-                                        ?
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
-                                        </svg>
-                                        :
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                        </svg>
-                                    }
-                                </div>
-                                <p className={show ? '' : "hide"}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, animi ad laboriosam nihil fuga ex tempore voluptatum dolor earum dolorum eaque consequatur explicabo maxime voluptates doloremque sapiente dolorem illo soluta.</p>
-                            </div>
+                            <Accordion defaultActiveKey="0" flush>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header className="accordionHeader">DELIVERY</Accordion.Header>
+                                    <Accordion.Body>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
 
                         </Col>
 

@@ -1,7 +1,7 @@
 import './NavbarHero.css'
 import { Navbar, Container, Nav, NavDropdown, Button, Modal } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
-
+import { NavLink } from 'react-router-dom'
 
 const Navbar2 = () => {
 
@@ -13,10 +13,10 @@ const Navbar2 = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className='navbarHero-links'>
-                    <Nav.Link href="/gallery" data-aos="fade-down">Gallery</Nav.Link>
-                    <Nav.Link href="#####" data-aos="fade-down">Services</Nav.Link>
-                    <Nav.Link href="#####" data-aos="fade-down">About me</Nav.Link>
-                    <Nav.Link href="#####" data-aos="fade-down">Contact</Nav.Link>
+                    <NavLink to="/gallery" data-aos="fade-down">Gallery</NavLink>
+                    <NavLink to="#####" data-aos="fade-down">Services</NavLink>
+                    <NavLink to="#####" data-aos="fade-down">About me</NavLink>
+                    <NavLink to="#####" data-aos="fade-down">Contact</NavLink>
                 </Nav>
             </Navbar.Collapse>
 

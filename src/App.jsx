@@ -4,25 +4,49 @@ import AppRoutes from './routes/index.routes'
 import GlassyNavbar from './components/01.Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Sponsors2 from './components/Footer/Sponsors/Sponsors'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-
+import { AuthContext } from './contexts/auth.context'
+import authService from './services/auth.service'
+import OffcanvasCart from './components/00. General/OffcanvasCart/OffcanvasCart'
 
 function App() {
 
+  const { storeToken, authenticateUser } = useContext(AuthContext)
+  const [showOffcanvas, setShowOffcanvas] = useState(false)
+
+
   useEffect(() => {
     Aos.init({ duration: 2000 })
+
+    createSession()
+
   }, [])
+
+  const createSession = () => {
+
+    authService
+      .setToken()
+      .then(({ data }) => {
+        storeToken(data.authToken)
+        authenticateUser()
+      })
+      .catch(err => console.log(err))
+  }
+
 
   return (
     <div className="App">
       <GlassyNavbar />
-      <AppRoutes />
+      <AppRoutes setShow={setShowOffcanvas} />
       {/* <Sponsors /> */}
       <Sponsors2 />
       <Footer />
+
+      <OffcanvasCart show={showOffcanvas} setShow={setShowOffcanvas} />
+
     </div>
   )
 }

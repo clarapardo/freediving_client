@@ -20,13 +20,13 @@
     object-fit: contain;
 }
 
-.PhotoDetailsPage .dropdown {
+/* .PhotoDetailsPage .dropdown {
     border-bottom: 1px solid green;
     margin: 15px 0;
     padding: 15px
-}
+} */
 
-.PhotoDetailsPage .dropdown-header {
+/* .PhotoDetailsPage .dropdown-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -44,7 +44,7 @@
 .PhotoDetailsPage .dropdown p {
     font-size: 0.8rem;
     margin-top: 15px;
-}
+} */
 
 .PhotoDetailsPage .btn {
     border-radius: 0;
@@ -70,4 +70,40 @@
 
 .PhotoDetailsPage .description {
     margin: 20px 0px 20px 0px
+}
+
+.accordionHeader {
+    background-color: transparent !important;
+}
+
+.accordionHeader button {
+    color: black !important;
+}
+
+.accordion-button {
+    font-size: 0.8rem;
+    padding: 10px 0px;
+    border-bottom: 1px solid greenyellow;
+    border-radius: 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+
+.accordion-button::after {
+    background-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    filter: grayscale(1)
+}
+
+.accordion-button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 10px 0px;
+    font-size: 0.8rem;
 }

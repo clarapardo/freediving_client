@@ -1,0 +1,20 @@
+.OffcanvasCartItemCard {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.OffcanvasCartItemCard p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.OffcanvasCartItemCard h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'JORGE';
+}
+
+.img-offcanvas {
+    height: 60px;
+    object-fit: cover;
+}

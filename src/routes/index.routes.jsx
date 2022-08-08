@@ -1,10 +1,10 @@
 import BasicRoutes from './basic.routes'
 
-const AppRoutes = () => {
+const AppRoutes = ({ setShow }) => {
 
     return (
         <>
-            <BasicRoutes />
+            <BasicRoutes setShow={setShow} />
         </>
     )
 }
