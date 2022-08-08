@@ -1,0 +1,10 @@
+.PhotoCard:hover {
+    filter: blur(0.04rem) grayscale(100%);
+    z-index: 0;
+}
+
+
+.PhotoCard img {
+    height: 100%;
+    object-fit: cover;
+}

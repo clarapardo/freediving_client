@@ -1,6 +1,6 @@
 import './controlPanel.css'
 
-import NewPhotoForm from '../../../../components/05. Private/Form.newPhoto/form.newPhoto'
+import NewPhotoForm from './../../components/05. Private/Form.newPhoto/form.newPhoto'
 
 const ControlPanel = () => {
 

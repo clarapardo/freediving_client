@@ -15,6 +15,7 @@ const NewPhotoForm = () => {
         price: 0,
         dimensions: [0, 0],
         photoUrl: '',
+        location: ''
     })
 
 
@@ -43,7 +44,7 @@ const NewPhotoForm = () => {
             .catch(err => console.log(err))
     }
 
-    const { title, description, price, dimensions, photoUrl } = newPhotoData
+    const { title, description, price, dimensions, photoUrl, location } = newPhotoData
 
     return (
         <Container className="NewPhotoForm">
@@ -56,6 +57,11 @@ const NewPhotoForm = () => {
                 <Form.Group className="mb-3" controlId="description">
                     <Form.Label>Description</Form.Label>
                     <Form.Control type="textarea" placeholder="Enter description" name="description" value={description} onChange={handleInputChange} />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="location">
+                    <Form.Label>Location</Form.Label>
+                    <Form.Control type="text" placeholder="Enter location" name="location" value={location} onChange={handleInputChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="price">

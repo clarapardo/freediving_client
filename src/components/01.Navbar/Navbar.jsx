@@ -1,33 +1,38 @@
 import './Navbar.css'
 import { Navbar, Container, Nav, NavDropdown, Button, Modal } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
-import { FOCUSABLE_SELECTOR } from '@testing-library/user-event/dist/utils'
+import { useLocation } from 'react-router-dom'
 
-const BCTNavbar = () => {
+
+const GlassyNavbar = () => {
+
+    let location = useLocation()
 
     const [invisible, setInvisible] = useState(true)
 
     const controlNavbar = () => {
 
-        if (typeof window !== 'undefined') {
-
-            (window.scrollY < (window.innerHeight + 500)) ? setInvisible(true) : setInvisible(false)
-
-        }
+        // if (typeof window !== 'undefined') {
+        (window.location.pathname !== '/') ? setInvisible(true) : setInvisible(false)
+        // }
     }
 
     useEffect(() => {
+        setInvisible(window.location.pathname === '/')
+    }, [location])
 
-        if (typeof window !== 'undefined') {
+    // useEffect(() => {
 
-            window.addEventListener('scroll', controlNavbar)
+    //     if (typeof window !== 'undefined') {
 
-            return () => {
-                window.removeEventListener('scroll', controlNavbar)
-            }
-        }
+    //         window.addEventListener('scroll', controlNavbar)
 
-    }, [window.scrollY])
+    //         return () => {
+    //             window.removeEventListener('scroll', controlNavbar)
+    //         }
+    //     }
+
+    // }, [window.scrollY])
 
     return (
         <div className={`div-navbar ${invisible && 'hidden'}`}>
@@ -37,7 +42,7 @@ const BCTNavbar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className='BCTNavbar-links'>
-                        <Nav.Link href="#####">Gallery</Nav.Link>
+                        <Nav.Link href="/gallery">Gallery</Nav.Link>
                         <Nav.Link href="#####">Services</Nav.Link>
                         <Nav.Link href="#####">About me</Nav.Link>
                         <Nav.Link href="#####">Contact</Nav.Link>
@@ -50,4 +55,4 @@ const BCTNavbar = () => {
 
 }
 
-export default BCTNavbar
+export default GlassyNavbar

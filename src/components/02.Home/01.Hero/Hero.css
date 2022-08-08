@@ -75,7 +75,7 @@ img {
 
 .social-media-icon-hero svg {
     fill: white;
-    filter: invert(100%)
+    /* backdrop-filter: invert(1); */
 }
 
 

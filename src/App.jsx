@@ -1,7 +1,7 @@
 import './App.css'
 import basicRoutes from './routes/basic.routes'
 import AppRoutes from './routes/index.routes'
-import BCTNavbar from './components/01.Navbar/Navbar'
+import GlassyNavbar from './components/01.Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Sponsors2 from './components/Footer/Sponsors/Sponsors'
 import { useEffect, useState } from 'react'
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <BCTNavbar />
+      <GlassyNavbar />
       <AppRoutes />
       {/* <Sponsors /> */}
       <Sponsors2 />

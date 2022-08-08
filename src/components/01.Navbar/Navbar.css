@@ -1,15 +1,13 @@
-/* .BCTNavbar-container {
-    padding-top: 25px;
-} */
+
 
 .div-navbar {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     position: fixed;
     top: 0px;
     z-index: 6;
-    transition: 0.65s ease;
+    /* transition: 0.65s ease; */
 }
 
 .hidden {
@@ -25,7 +23,7 @@
     margin-left: auto;
 
     background: rgba(255, 255, 255, 0.11);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.17);

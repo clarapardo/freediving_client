@@ -1,5 +1,6 @@
 import './Gallery-preview.css'
 import { Row, Col, Container, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const column1 = ['./img/gallery/06.jpg', './img/gallery/11.png']
 const column2 = ['./img/gallery/13.jpg', './img/gallery/14.jpg']
@@ -41,7 +42,9 @@ const GalleryPreview = () => {
                         <h2>Explore the world.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus modi tempora illum sapiente quod iusto atque, inventore dignissimos culpa molestias debitis. Omnis repudiandae suscipit eligendi! At perspiciatis dignissimos sequi autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum totam temporibus consequatur necessitatibus, tenetur, possimus dicta cumque ea iste officia dignissimos veniam aut maxime, quibusdam doloribus dolore obcaecati. Et.</p>
 
-                        <Button variant="info" className="gallery-preview-btn">see gallery </Button>
+                        <Link to="/gallery">
+                            <Button variant="info" className="gallery-preview-btn">see gallery </Button>
+                        </Link>
                     </Col>
 
                 </Row>

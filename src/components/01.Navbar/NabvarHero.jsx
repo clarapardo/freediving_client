@@ -13,7 +13,7 @@ const Navbar2 = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className='navbarHero-links'>
-                    <Nav.Link href="#####" data-aos="fade-down">Gallery</Nav.Link>
+                    <Nav.Link href="/gallery" data-aos="fade-down">Gallery</Nav.Link>
                     <Nav.Link href="#####" data-aos="fade-down">Services</Nav.Link>
                     <Nav.Link href="#####" data-aos="fade-down">About me</Nav.Link>
                     <Nav.Link href="#####" data-aos="fade-down">Contact</Nav.Link>
