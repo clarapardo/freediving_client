@@ -11,6 +11,7 @@ import 'aos/dist/aos.css'
 import { AuthContext } from './contexts/auth.context'
 import authService from './services/auth.service'
 import OffcanvasCart from './components/00. General/OffcanvasCart/OffcanvasCart'
+import CartIcon from './components/00. General/CartIcon/CartIcon'
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       <Footer />
 
       <OffcanvasCart show={showOffcanvas} setShow={setShowOffcanvas} />
+      <CartIcon show={showOffcanvas} setShow={setShowOffcanvas} />
 
     </div>
   )

@@ -19,10 +19,7 @@ const OffcanvasCart = ({ show, setShow }) => {
     const getCartData = () => {
         cartService
             .getCart(user?._id)
-            .then(({ data }) => {
-                console.log('--------', data)
-                setCartItems(data.items)
-            })
+            .then(({ data }) => setCartItems(data.items))
             .catch(err => console.log(err))
     }
 
@@ -55,11 +52,10 @@ const OffcanvasCart = ({ show, setShow }) => {
                                         <hr />
                                         <div className='d-flex justify-content-between align-items-center'>
                                             <h4>SUBTOTAL</h4>
-                                            {console.log('))))))', cartItems)}
                                             <h6>${cartItems?.reduce((acc, curr) => acc + curr.price, 0)}</h6>
                                         </div>
                                         <p>Taxes and discount codes calculated at checkout</p>
-                                        <Link to='#####'>
+                                        <Link to='/checkout'>
                                             <Button variant='dark'>CHECK OUT</Button>
                                         </Link>
                                     </div>

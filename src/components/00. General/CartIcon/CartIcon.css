@@ -1,0 +1,23 @@
+.CartIcon {
+    width: 60px;
+    height: 60px;
+    /* background-color: #1a2a30; */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    position: fixed;
+    top: 85vh;
+    left: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartIcon img {
+    width: 25px;
+    /* filter: invert(1) */
+}

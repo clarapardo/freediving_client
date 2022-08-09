@@ -10,25 +10,20 @@ const OffcanvasCartItemCard = ({ item, getCartData }) => {
 
     const { user, isLoggedIn } = useContext(AuthContext)
 
-    console.log('7777', item)
-
-
     const handleDelete = (idPhoto) => {
 
         const userId = user._id
 
         cartService
             .removeItem({ userId, idPhoto })
-            .then(() => {
-                getCartData()
-                console.log('LO HE BORRADO :)')
-            })
+            .then(() => getCartData())
             .catch(err => console.log(err))
 
     }
 
     return (
         <div className="OffcanvasCartItemCard">
+
             <Row style={{ height: '100%' }}>
 
                 <Col md={3}>
@@ -45,7 +40,7 @@ const OffcanvasCartItemCard = ({ item, getCartData }) => {
                         <p>${item.price}</p>
                     </div>
                     <p>{item.dimensions[0]}x{item.dimensions[1]} cm</p>
-                    <Button onClick={() => handleDelete(item._id)}>
+                    <Button onClick={() => handleDelete(item._id)} className="remove-btn">
                         <p>Remove</p>
                     </Button>
                 </Col>

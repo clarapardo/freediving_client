@@ -22,7 +22,7 @@ const GalleryPage = () => {
     }, [])
 
     return (
-        <Container className="GalleryPage">
+        <div className="GalleryPage">
 
             <Row>
 
@@ -48,7 +48,7 @@ const GalleryPage = () => {
             </Row>
 
 
-        </Container >
+        </div >
     )
 }
 
