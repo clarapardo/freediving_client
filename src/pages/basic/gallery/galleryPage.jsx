@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import photographyService from '../../../services/photography.service'
 import PhotoCard from '../../../components/03. Gallery/PhotoCard/PhotoCard'
 import { Row, Col, Container } from 'react-bootstrap'
+import { PulseLoader } from 'react-spinners'
 
 
 const GalleryPage = () => {
@@ -16,7 +17,10 @@ const GalleryPage = () => {
             .getAllPhotos()
             .then(({ data }) => {
                 setAllPhotos(data)
-                setIsLoading(false)
+
+                setTimeout(() => {
+                    setIsLoading(false)
+                }, 1000)
             })
             .catch(err => console.log(err))
     }, [])
@@ -37,7 +41,9 @@ const GalleryPage = () => {
                 <Col md={9}>
                     {isLoading
                         ?
-                        <h2>ESTOY CARGANDO</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '50px' }}>
+                            <PulseLoader size={8} color={'#1a2a30'} speedMultiplier={0.6} />
+                        </div>
                         :
                         <>
                             <div className='grid-container '>
@@ -45,8 +51,8 @@ const GalleryPage = () => {
                             </div>
                         </>}
                 </Col>
+                
             </Row>
-
 
         </div >
     )

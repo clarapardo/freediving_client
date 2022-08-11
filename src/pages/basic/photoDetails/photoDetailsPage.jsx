@@ -5,6 +5,8 @@ import { Container, Row, Col, Button, Dropdown, Accordion } from 'react-bootstra
 import photographyService from '../../../services/photography.service'
 import cartService from './../../../services/cart.service'
 import { AuthContext } from './../../../contexts/auth.context'
+import { PulseLoader } from 'react-spinners'
+
 
 
 const PhotoDetailsPage = ({ setShow }) => {
@@ -45,7 +47,9 @@ const PhotoDetailsPage = ({ setShow }) => {
         <Container className="PhotoDetailsPage">
             {isLoading
                 ?
-                <h2>ESTOY CARGANDO</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '50px' }}>
+                    <PulseLoader size={8} color={'#1a2a30'} speedMultiplier={0.6} />
+                </div>
                 :
                 <Container>
                     <Row>

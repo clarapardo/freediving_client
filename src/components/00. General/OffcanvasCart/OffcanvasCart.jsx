@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import cartService from '../../../services/cart.service'
 import { AuthContext } from '../../../contexts/auth.context'
 import OffcanvasCartItemCard from '../OffcanvasCartItemCard/OffcanvasCartItemCard'
+import { PulseLoader } from 'react-spinners'
+
 
 const OffcanvasCart = ({ show, setShow }) => {
 
@@ -30,7 +32,9 @@ const OffcanvasCart = ({ show, setShow }) => {
         <div className="OffcanvasCart">
             {!user
                 ?
-                <h1>ESTOY CARGANDO</h1>
+                <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '50px' }}>
+                    <PulseLoader size={8} color={'#1a2a30'} speedMultiplier={0.6} />
+                </div>
                 :
                 <Offcanvas show={show} onHide={handleClose} placement='end'>
                     <Offcanvas.Header closeButton>
@@ -56,7 +60,7 @@ const OffcanvasCart = ({ show, setShow }) => {
                                         </div>
                                         <p>Taxes and discount codes calculated at checkout</p>
                                         <Link to='/checkout'>
-                                            <Button variant='dark'>CHECK OUT</Button>
+                                            <Button variant='dark' onClick={() => setShow(false)}>CHECK OUT</Button>
                                         </Link>
                                     </div>
                                 </>
