@@ -7,8 +7,10 @@ import CheckoutForm from '../../../components/00. General/CheckoutForm/CheckoutF
 import { useContext, useState, useEffect } from 'react'
 import cartService from '../../../services/cart.service'
 import CheckoutCartItemCard from '../../../components/00. General/CheckoutCartItemCard/CheckoutCartItemCard'
+import { Link } from 'react-router-dom'
 
 const stripePromise = loadStripe("pk_test_51LUnwvCJGUzgwzbBPxbQE9R3593eLuJOtmQfEDsG665kIG9PhWHyEgMeFZF6iOouQdMz1g7DsYSIW032q70i1Ew50036XmtW1m")
+
 
 const CheckoutPage = () => {
 
@@ -62,102 +64,113 @@ const CheckoutPage = () => {
     return (
         <div className="CheckoutPage">
 
-            <video src="https://exposure.accelerator.net/production/photos/ibfuae6jxdl4f5qe8x81cnt3weo0vkkxgyva/original.mp4;/resize(1920,_,fit)/crf(20).mp4" autoPlay muted loop playsInline></video>
+            <Link to='/gallery'>
+                <Button className="goBackCheckout-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg> Back to gallery</Button>
+            </Link>
 
-            <div className="glassy-checkOut">
+            <img src="/img/logo.png" className="logo_checkout" />
+            <h4>Rafael Fernandez</h4>
 
-                <Container>
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <video style={{ position: 'absolute' }} src="https://exposure.accelerator.net/production/photos/ibfuae6jxdl4f5qe8x81cnt3weo0vkkxgyva/original.mp4;/resize(1920,_,fit)/crf(20).mp4" autoPlay muted loop playsInline></video>
 
-                    <Row>
+                <div className="glassy-checkOut" style={{ position: 'absolute' }}>
 
-                        <Col md={8}>
-                            <h2 style={{ fontFamily: 'JORGE', textTransform: 'uppercase' }}>Shopping Cart</h2>
-                            <section className="deliveryAddress-info">
-                                <div className="sectionHeader">
-                                    <div><p>1</p></div>
-                                    <h6>Delivery address</h6>
-                                </div>
-                                <Container>
-                                    <Row>
-                                        <Col>
-                                            <Form.Label>Email address *</Form.Label>
-                                            <Form.Control type="email" placeholder="example@example.com" name="email0" onChange={handleEmails} id="email0" />
-                                        </Col>
-                                        <Col>
-                                            <Form.Label>Confirm email address *</Form.Label>
-                                            <Form.Control type="email" placeholder="example@example.com" name="email1" onChange={handleEmails} id="email1" />
-                                        </Col>
-                                        {emailConfirmationMessage ? <p style={{ fontWeight: 'bold', color: 'greenyellow', margin: '0' }}>{emailConfirmationMessage}</p> : ''}
-                                    </Row>
-                                </Container>
-                            </section>
+                    <Container>
 
-                            <section className="payment-info">
-                                <div className="sectionHeader">
-                                    <div><p>2</p></div>
-                                    <h6>Payment information</h6>
-                                </div>
-                                <Container>
+                        <Row>
 
-                                    <p>Choose a payment method:</p>
-                                    <div className='paymentMethods-btns'>
-                                        <Button variant='dark' style={{ margin: '0px 20px', width: '175px' }}>Credit card</Button>
-                                        <Button variant='none' style={{ margin: '0px 20px', width: '175px', border: '1px solid black' }}><img src="/img/apple-white.png" style={{ filter: 'invert(1)', width: '14px', marginBottom: '5px', marginRight: '5px' }} />Pay</Button>
+                            <Col md={8}>
+                                <h2 style={{ fontFamily: 'JORGE', textTransform: 'uppercase' }}>Shopping Cart</h2>
+                                <section className="deliveryAddress-info">
+                                    <div className="sectionHeader">
+                                        <div><p>1</p></div>
+                                        <h6>Delivery address</h6>
+                                    </div>
+                                    <Container>
+                                        <Row>
+                                            <Col>
+                                                <Form.Label>Email address *</Form.Label>
+                                                <Form.Control type="email" placeholder="example@example.com" name="email0" onChange={handleEmails} id="email0" />
+                                            </Col>
+                                            <Col>
+                                                <Form.Label>Confirm email address *</Form.Label>
+                                                <Form.Control type="email" placeholder="example@example.com" name="email1" onChange={handleEmails} id="email1" />
+                                            </Col>
+                                            {emailConfirmationMessage ? <p style={{ fontWeight: 'bold', color: 'greenyellow', margin: '0' }}>{emailConfirmationMessage}</p> : ''}
+                                        </Row>
+                                    </Container>
+                                </section>
+
+                                <section className="payment-info">
+                                    <div className="sectionHeader">
+                                        <div><p>2</p></div>
+                                        <h6>Payment information</h6>
+                                    </div>
+                                    <Container>
+
+                                        <p>Choose a payment method:</p>
+                                        <div className='paymentMethods-btns'>
+                                            <Button variant='dark' style={{ margin: '0px 20px', width: '175px' }}>Credit card</Button>
+                                            <Button variant='none' style={{ margin: '0px 20px', width: '175px', border: '1px solid black' }}><img src="/img/apple-white.png" style={{ filter: 'invert(1)', width: '14px', marginBottom: '5px', marginRight: '5px' }} />Pay</Button>
+                                        </div>
+
+                                        <hr />
+
+                                        <Row>
+                                            <Col>
+                                                <Form.Control type="text" placeholder="First Name *" name="name" />
+                                            </Col>
+                                            <Col>
+                                                <Form.Control type="text" placeholder="Last Name *" name="name" />
+                                            </Col>
+                                        </Row>
+
+                                        <Elements stripe={stripePromise}>
+                                            <CheckoutForm emails={emails} setEmailConfirmationMessage={setEmailConfirmationMessage} totalAmount={totalAmount} />
+                                        </Elements>
+                                    </Container>
+
+                                </section>
+
+                            </Col>
+
+                            <Col md={4}>
+
+                                <div className="orderSummary">
+                                    <Container>
+                                        {!cartItems
+                                            ?
+                                            <h1>ESTOY CARGANDO</h1>
+                                            :
+                                            <div className="allItemsInCartCheckout">
+                                                {cartItems?.length !== 0
+                                                    ?
+                                                    <>
+                                                        {cartItems?.map(elm => <CheckoutCartItemCard item={elm} />)}
+                                                    </>
+                                                    :
+                                                    <h6>Cart is empty.</h6>
+                                                }
+                                            </div>
+                                        }
+                                    </Container>
+
+                                    <div className="totalCheckout">
+                                        <h5>Total</h5>
+                                        <h5>${totalAmount}</h5>
                                     </div>
 
-                                    <hr />
-
-                                    <Row>
-                                        <Col>
-                                            <Form.Control type="text" placeholder="First Name *" name="name" />
-                                        </Col>
-                                        <Col>
-                                            <Form.Control type="text" placeholder="Last Name *" name="name" />
-                                        </Col>
-                                    </Row>
-
-                                    <Elements stripe={stripePromise}>
-                                        <CheckoutForm emails={emails} setEmailConfirmationMessage={setEmailConfirmationMessage} totalAmount={totalAmount} />
-                                    </Elements>
-                                </Container>
-
-                            </section>
-
-                        </Col>
-
-                        <Col md={4}>
-
-                            <div className="orderSummary">
-                                <Container>
-                                    {!cartItems
-                                        ?
-                                        <h1>ESTOY CARGANDO</h1>
-                                        :
-                                        <>
-                                            {cartItems?.length !== 0
-                                                ?
-                                                <>
-                                                    {cartItems?.map(elm => <CheckoutCartItemCard item={elm} />)}
-                                                </>
-                                                :
-                                                <h6>Cart is empty.</h6>
-                                            }
-                                        </>
-                                    }
-                                </Container>
-
-                                <div className="totalCheckout">
-                                    <h5>Total</h5>
-                                    <h5>${totalAmount}</h5>
                                 </div>
 
-                            </div>
+                            </Col>
 
-                        </Col>
+                        </Row>
+                    </Container>
 
-                    </Row>
-                </Container>
-
+                </div>
             </div>
 
         </div >

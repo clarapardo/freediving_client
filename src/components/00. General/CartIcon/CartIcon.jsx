@@ -11,7 +11,7 @@ const CartIcon = ({ show, setShow }) => {
     const [invisible, setInvisible] = useState(true)
 
     useEffect(() => {
-        setInvisible(window.location.pathname === '/')
+        setInvisible(window.location.pathname === '/' || window.location.pathname === '/checkout')
     }, [location])
 
     return (

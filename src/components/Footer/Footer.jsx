@@ -46,8 +46,8 @@ const Footer = () => {
                         </Col>
 
                         <Col md={{ span: 4, offset: 1 }} className="center-column">
-                            <div className="logo"></div>
-                            <h3>BCT</h3>
+                            <div><img src='/img/logo.png' className="logo_navbar" /></div>
+                            <h3>Rafael Fernandez</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                             <div className="social-media-links">
                                 <a href='#####'>

@@ -1,7 +1,6 @@
 PENDING 
 
 * Make things responsive
-* Logo
 * Implement contact form logic (nodemailer)
 
 
@@ -18,10 +17,8 @@ Sections order
 
 OBJECTIVES FOR TODAY
 - Animaciones
-- Logo + quitar BCT
 - White line in services-preview
 - Hacer botón
-- Select font
 
 
 - Services - podcats maybe?

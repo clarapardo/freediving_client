@@ -65,7 +65,14 @@
 }
 
 .center-column img {
-    width: 30%
+    filter: invert(1);
+    margin-bottom: 30px;
+    width: 150px
+}
+
+.center-column h3 {
+    font-family: 'JORGE';
+    text-transform: uppercase;
 }
 
 .footer-div svg {

@@ -2,7 +2,7 @@
     width: 100%;
     /* display: flex;
     justify-content: center; */
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
     z-index: 6;
     /* transition: 0.65s ease; */
@@ -12,6 +12,10 @@
     position: fixed;
     top: -100px;
     transition: 0.65s ease;
+}
+
+.logo_navbar {
+    width: 100px
 }
 
 .BCTNavbar {

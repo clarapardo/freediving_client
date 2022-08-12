@@ -19,7 +19,7 @@ const GlassyNavbar = () => {
         <div className={`div-navbar ${invisible && 'hidden'}`}>
             <Navbar collapseOnSelect expand="lg" className="BCTNavbar">
 
-                <NavLink to="/">BCT</NavLink>
+                <NavLink to="/"><img src='/img/logo.png' className="logo_navbar" /></NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                 <Navbar.Collapse id="responsive-navbar-nav">

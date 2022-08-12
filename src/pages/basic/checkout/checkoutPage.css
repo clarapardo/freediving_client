@@ -1,5 +1,5 @@
 .CheckoutPage {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     /* min-height: 100vh; */
     /* background-color: rgb(114, 217, 191); */
 
@@ -8,11 +8,18 @@
     align-items: center;
 }
 
+.CheckoutPage h4 {
+    font-family: 'JORGE';
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
 .CheckoutPage video {
     width: 85vw;
     height: 82vh;
     border-radius: 10px;
-    z-index: 1
+    z-index: 1;
+    display: inline-block
 }
 
 .CheckoutPage input {
@@ -40,7 +47,7 @@
     width: 85vw;
     padding: 40px;
     height: 82vh;
-    z-index: 2
+    z-index: 2;
 }
 
 .sectionHeader {
@@ -123,4 +130,38 @@
 
     border-top: 1px solid black;
     padding-top: 20px;
+}
+
+
+
+.logo_checkout {
+    width: 120px;
+    padding-top: 10px;
+}
+
+.goBackCheckout-btn {
+    background-color: transparent;
+    color: black;
+    text-transform: lowercase;
+    border: none;
+
+    position: absolute;
+    top: 20px;
+    left: 20px
+}
+
+.goBackCheckout-btn:hover {
+    background-color: transparent;
+    color: black;
+    text-transform: lowercase;
+    border: none;
+}
+
+.allItemsInCartCheckout {
+    height: 50vh;
+    overflow-y: scroll
+}
+
+.allItemsInCartCheckout::-webkit-scrollbar {
+    width: 0px;
 }

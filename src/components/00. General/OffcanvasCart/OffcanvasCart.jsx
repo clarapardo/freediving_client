@@ -48,9 +48,11 @@ const OffcanvasCart = ({ show, setShow }) => {
                                 <p>Your cart is currently empty.</p>
                                 :
                                 <>
-                                    {cartItems?.map(elm => {
-                                        return <OffcanvasCartItemCard item={elm} getCartData={getCartData} />
-                                    })}
+                                    <div className="allItemsInCartOffcanvas">
+                                        {cartItems?.map(elm => {
+                                            return <OffcanvasCartItemCard item={elm} getCartData={getCartData} />
+                                        })}
+                                    </div>
 
                                     <div className="subtotal-offcanvas">
                                         <hr />

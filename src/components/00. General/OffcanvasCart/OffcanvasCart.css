@@ -24,3 +24,16 @@
     font-size: 0.9rem;
 
 }
+
+/* ::-webkit-scrollbar {
+    width: 1px;
+} */
+
+.allItemsInCartOffcanvas {
+    height: 63vh;
+    overflow-y: scroll
+}
+
+.allItemsInCartOffcanvas::-webkit-scrollbar {
+    width: 0px;
+}

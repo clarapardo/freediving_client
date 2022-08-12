@@ -30,8 +30,8 @@ const GalleryPage = () => {
 
             <Row>
 
-                <Col md={3} >
-                    <div className="gallery-description">
+                <Col md={3} style={{ position: 'relative' }}>
+                    <div className="gallery-description sticky-top" style={{ top: '40px' }}>
                         <h2>Gallery</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum natus numquam facere temporibus atque ullam enim et sequi eveniet quaerat, tempore, quisquam at nesciunt sit qui! Quisquam, sapiente earum. Obcaecati.</p>
                         <img className="signature" src='/img/signature0.png' />
@@ -51,7 +51,7 @@ const GalleryPage = () => {
                             </div>
                         </>}
                 </Col>
-                
+
             </Row>
 
         </div >
