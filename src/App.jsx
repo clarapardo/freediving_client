@@ -3,7 +3,7 @@ import basicRoutes from './routes/basic.routes'
 import AppRoutes from './routes/index.routes'
 import GlassyNavbar from './components/01.Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import Sponsors2 from './components/Footer/Sponsors/Sponsors'
+import Sponsors from './components/Footer/Sponsors/Sponsors'
 import { useEffect, useState, useContext } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -42,8 +42,6 @@ function App() {
     <div className="App">
       <GlassyNavbar />
       <AppRoutes setShow={setShowOffcanvas} />
-      {/* <Sponsors /> */}
-      <Sponsors2 />
       <Footer />
 
       <OffcanvasCart show={showOffcanvas} setShow={setShowOffcanvas} />

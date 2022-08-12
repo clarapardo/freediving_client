@@ -10,15 +10,8 @@ const GlassyNavbar = () => {
 
     const [invisible, setInvisible] = useState(true)
 
-    const controlNavbar = () => {
-
-        // if (typeof window !== 'undefined') {
-        (window.location.pathname !== '/') ? setInvisible(true) : setInvisible(false)
-        // }
-    }
-
     useEffect(() => {
-        setInvisible(window.location.pathname === '/')
+        setInvisible(window.location.pathname === '/' || window.location.pathname === '/checkout')
     }, [location])
 
 

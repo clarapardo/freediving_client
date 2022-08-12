@@ -1,11 +1,31 @@
 .CheckoutPage {
     padding-top: 100px;
     /* min-height: 100vh; */
-    background-color: rgb(114, 217, 191);
+    /* background-color: rgb(114, 217, 191); */
 
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.CheckoutPage video {
+    width: 85vw;
+    height: 82vh;
+    border-radius: 10px;
+    z-index: 1
+}
+
+.CheckoutPage input {
+    color: black !important
+}
+
+.CheckoutPage input::placeholder {
+    color: black
+}
+
+.CheckoutPage input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 
@@ -19,7 +39,8 @@
     border-radius: 10px;
     width: 85vw;
     padding: 40px;
-    height: 200vh
+    height: 82vh;
+    z-index: 2
 }
 
 .sectionHeader {
@@ -28,6 +49,7 @@
     align-items: center;
     padding: 15px 30px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .sectionHeader div {
@@ -55,8 +77,25 @@
     margin-top: 30px;
 }
 
+.deliveryAddress-info label {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
 .payment-info {
     margin-top: 40px;
+}
+
+.payment-info p {
+    font-weight: bold;
+    font-size: 0.8rem;
+    /* margin: 0; */
+}
+
+.payment-info label {
+    font-size: 0.8rem;
+    margin: 0;
 }
 
 .paymentMethods-btns {
@@ -66,6 +105,22 @@
 }
 
 .orderSummary {
-    background-color: gray;
+    background-color: rgb(255 255 255/ 20%);
     min-height: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+
+.totalCheckout {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 10px 20px;
+    text-transform: uppercase;
+
+    border-top: 1px solid black;
+    padding-top: 20px;
 }

@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import axios from 'axios'
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ emails, setEmailConfirmationMessage, totalAmount }) => {
 
     const stripe = useStripe()
     const elements = useElements()
@@ -12,22 +12,32 @@ const CheckoutForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: elements.getElement(CardElement)
-        })
+        if (emails[0] === undefined || emails[1] === undefined) {
+            setEmailConfirmationMessage("Please fill in the fields.")
+            return
+        } else if (emails[0].length !== 0 && emails[1].length !== 0 && emails[0] !== emails[1]) {
+            setEmailConfirmationMessage("The emails don't match.")
+            return
 
-        if (!error) {
-
-            const { id } = paymentMethod
-            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/cart/checkout`, {
-                id,
-                amount: 120000
+        } else {
+            const { error, paymentMethod } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: elements.getElement(CardElement)
             })
 
-            console.log(data)
-            elements.getElement(CardElement).clear()
+            if (!error) {
+
+                const { id } = paymentMethod
+                const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/cart/checkout`, {
+                    id,
+                    amount: totalAmount * 100
+                })
+
+                console.log(data)
+                elements.getElement(CardElement).clear()
+            }
         }
+
 
     }
 
@@ -35,7 +45,9 @@ const CheckoutForm = () => {
 
         <Form onSubmit={handleSubmit}>
             <CardElement />
-            <Button type="submit">BUY</Button>
+            <div>
+                <Button variant='dark' type='submit' className='submitCheckout-btn'>Confirm order</Button>
+            </div>
         </Form>
     )
 }
