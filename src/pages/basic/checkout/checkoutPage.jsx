@@ -17,13 +17,16 @@ const CheckoutPage = () => {
     const { user, isLoggedIn } = useContext(AuthContext)
     const [cartItems, setCartItems] = useState(null)
     const [emails, setEmails] = useState([])
-    const [emailConfirmationMessage, setEmailConfirmationMessage] = useState(false)
+    const [validationMessages, setValidationMessages] = useState([])
+    const [userName, setUserName] = useState([])
     const [totalAmount, setTotalAmount] = useState(0)
+    const [isIOS, setIsIOS] = useState(true)
 
 
     useEffect(() => {
         getCartData()
         getTotalAmount()
+        getDevice()
     }, [])
 
     useEffect(() => {
@@ -43,8 +46,16 @@ const CheckoutPage = () => {
         setTotalAmount(amount)
     }
 
+    const getDevice = () => {
 
-    const handleEmails = e => {
+        const IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+        if (!IOS) {
+            setIsIOS(false)
+        }
+    }
+
+
+    const handleInputs = e => {
 
         const { name, value } = e.currentTarget
 
@@ -56,8 +67,15 @@ const CheckoutPage = () => {
             let newArr = [...emails]
             newArr[1] = value
             setEmails(newArr)
+        } else if (name === 'firstName') {
+            let newArr = [...userName]
+            newArr[0] = value
+            setUserName(newArr)
+        } else if (name === 'lastName') {
+            let newArr = [...userName]
+            newArr[1] = value
+            setUserName(newArr)
         }
-
     }
 
 
@@ -93,13 +111,13 @@ const CheckoutPage = () => {
                                         <Row>
                                             <Col>
                                                 <Form.Label>Email address *</Form.Label>
-                                                <Form.Control type="email" placeholder="example@example.com" name="email0" onChange={handleEmails} id="email0" />
+                                                <Form.Control type="email" placeholder="example@example.com" name="email0" onChange={handleInputs} id="email0" />
                                             </Col>
                                             <Col>
                                                 <Form.Label>Confirm email address *</Form.Label>
-                                                <Form.Control type="email" placeholder="example@example.com" name="email1" onChange={handleEmails} id="email1" />
+                                                <Form.Control type="email" placeholder="example@example.com" name="email1" onChange={handleInputs} id="email1" />
                                             </Col>
-                                            {emailConfirmationMessage ? <p style={{ fontWeight: 'bold', color: 'greenyellow', margin: '0' }}>{emailConfirmationMessage}</p> : ''}
+                                            {validationMessages[0] ? <p style={{ fontWeight: 'bold', color: 'greenyellow', margin: '0' }}>{validationMessages[0]}</p> : ''}
                                         </Row>
                                     </Container>
                                 </section>
@@ -114,22 +132,25 @@ const CheckoutPage = () => {
                                         <p>Choose a payment method:</p>
                                         <div className='paymentMethods-btns'>
                                             <Button variant='dark' style={{ margin: '0px 20px', width: '175px' }}>Credit card</Button>
-                                            <Button variant='none' style={{ margin: '0px 20px', width: '175px', border: '1px solid black' }}><img src="/img/apple-white.png" style={{ filter: 'invert(1)', width: '14px', marginBottom: '5px', marginRight: '5px' }} />Pay</Button>
+                                            {isIOS && <Button variant='none' onClick={() => alert('not yet implemented :)')} style={{ margin: '0px 20px', width: '175px', border: '1px solid black' }}><img src="/img/apple-white.png" style={{ filter: 'invert(1)', width: '14px', marginBottom: '5px', marginRight: '5px' }} />Pay</Button>}
+                                            {!isIOS && <Button variant='none' onClick={() => alert('not yet implemented :)')} style={{ margin: '0px 20px', width: '175px', border: '1px solid black' }}><img src="/img/google.png" style={{ filter: 'invert(1)', width: '14px', marginBottom: '5px', marginRight: '5px' }} />Pay</Button>}
                                         </div>
 
                                         <hr />
 
                                         <Row>
                                             <Col>
-                                                <Form.Control type="text" placeholder="First Name *" name="name" />
+                                                <Form.Control type="text" placeholder="First Name *" name="firstName" onChange={handleInputs} />
                                             </Col>
                                             <Col>
-                                                <Form.Control type="text" placeholder="Last Name *" name="name" />
+                                                <Form.Control type="text" placeholder="Last Name *" name="lastName" onChange={handleInputs} />
                                             </Col>
                                         </Row>
+                                        {validationMessages[1] ? <p style={{ fontWeight: 'bold', color: 'greenyellow', margin: '0' }}>{validationMessages[1]}</p> : ''}
+
 
                                         <Elements stripe={stripePromise}>
-                                            <CheckoutForm emails={emails} setEmailConfirmationMessage={setEmailConfirmationMessage} totalAmount={totalAmount} />
+                                            <CheckoutForm emails={emails} userName={userName} validationMessages={validationMessages} setValidationMessages={setValidationMessages} totalAmount={totalAmount} />
                                         </Elements>
                                     </Container>
 
