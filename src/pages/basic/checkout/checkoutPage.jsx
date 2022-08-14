@@ -88,8 +88,10 @@ const CheckoutPage = () => {
                 </svg> Back to gallery</Button>
             </Link>
 
-            <img src="/img/logo.png" className="logo_checkout" />
-            <h4>Rafael Fernandez</h4>
+            <Link to='/'>
+                <img src="/img/logo.png" className="logo_checkout" />
+                <h5>Rafael Fernandez</h5>
+            </Link>
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <video style={{ position: 'absolute' }} src="https://exposure.accelerator.net/production/photos/ibfuae6jxdl4f5qe8x81cnt3weo0vkkxgyva/original.mp4;/resize(1920,_,fit)/crf(20).mp4" autoPlay muted loop playsInline></video>

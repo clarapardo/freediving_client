@@ -8,10 +8,16 @@
     align-items: center;
 }
 
-.CheckoutPage h4 {
+.CheckoutPage h5 {
     font-family: 'JORGE';
     text-transform: uppercase;
     margin-top: 15px;
+    font-size: 0.8rem;
+    color: black
+}
+
+.CheckoutPage a {
+    text-decoration: none;
 }
 
 .CheckoutPage video {
